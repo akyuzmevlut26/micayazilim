@@ -50,7 +50,7 @@
             let container = $('#logContainer');
             let content = container.find('table tbody');
 
-            $.get(sprintf('/api/log%s', [((window.location.search.trim().length) ? (window.location.search + '&id=created_at:desc') : '?id=created_at:desc')]), (response) => {
+            $.get(sprintf('/api/log%s', [((window.location.search.trim().length) ? (window.location.search + '&sort=id:desc') : '?sort=id:desc')]), (response) => {
                 content.html('');
 
                 if (response.data) {
